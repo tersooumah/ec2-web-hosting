@@ -2,70 +2,83 @@
 ## Create an EC2 Instance
 
 Sign in to AWS Management Console and search for EC2
-![1](https://github.com/user-attachments/assets/ce5faf61-cf27-4976-82dc-81c0850055d0)
+![Artboard 2](https://github.com/user-attachments/assets/125ae40f-a85d-4e44-b560-87fadc11a1c1)
 
 
 Click on 'Instances' on the left pane and click 'Launch Instances'
-![2](https://github.com/user-attachments/assets/d94cb69d-5f69-4e3a-b0aa-961718cd30ba)
+![Artboard 3](https://github.com/user-attachments/assets/bcfa4e29-d4b7-4feb-bc81-12e1e176733b)
 
 
-Choose a name for your instance, select 'Amazon Linux' for 'Application and OS Images' and maintain the settings for AMI (free tier eligible), Architecture (64-bit (x86)) and instance type (free tier eligible).
-![3](https://github.com/user-attachments/assets/d530ee77-89be-4cb2-a530-523aca01d05d)
-![4](https://github.com/user-attachments/assets/e8fddaad-9657-49c8-9b84-d15422c03895)
+
+Choose a name for your instance, select 'Amazon Linux' for 'Application and OS Images', and maintain the settings for AMI (free tier eligible), Architecture (64-bit (x86)), and instance type (free tier eligible).
+![Artboard 4](https://github.com/user-attachments/assets/bf7d8d68-06b8-4cb3-87fd-10a30ec672b9)
+![Artboard 5](https://github.com/user-attachments/assets/76cc0340-dba6-4bb2-a72f-7cb30ead3ce9)
 
 
 Create key pair (the key pair file will be automatically downloaded once created)
-![5](https://github.com/user-attachments/assets/29374652-3998-4e6a-ab85-aa3d39ea0619)
-![6](https://github.com/user-attachments/assets/fe3946ed-385a-4e17-a352-23ecff05c281)
+![Artboard 6](https://github.com/user-attachments/assets/9a197b4f-458b-4dbb-86c3-8e5d924c8371)
+![Artboard 7](https://github.com/user-attachments/assets/96665a84-7476-496b-84f3-af2511f0c4f2)
 
 
-Configure security group to allow SSH, HTTP and HTTPS traffic and click launch instance
-![7](https://github.com/user-attachments/assets/8db2f5d0-e2d4-47fe-aa8f-ac9b269fb2b5)
-![8](https://github.com/user-attachments/assets/1cc2eca8-56c7-408a-ba4d-e3956d591f12)
+
+Configure security group to allow SSH, HTTP, and HTTPS traffic and click launch instance
+![Artboard 9](https://github.com/user-attachments/assets/d7793398-f226-430a-92fd-7de50b10b3be)
 
 
-Head back to Instances dashboard and Refresh Instances, and wait for a few minutes for the status to update, then highlight the newly created instance and "connect"
-![10](https://github.com/user-attachments/assets/1fe6c348-7742-4b9c-96eb-cec2126f9fd8)
+Head back to Instances dashboard and Refresh Instances, and wait for a few minutes for the status to update, then highlight the newly created instance and click "connect"
+![Artboard 10](https://github.com/user-attachments/assets/cbb6e820-bae8-4552-af1f-53efc0b7b982)
+![Artboard 11](https://github.com/user-attachments/assets/9a8599ec-572d-4e45-b460-bb7b366f8bae)
 
-Click on SSH client and see the instructions on how to connect to the service via unix/Linux using ssh. (Copy the ssh command and keep aside)
-![11](https://github.com/user-attachments/assets/fdd70bfc-3f66-4aad-ab02-e03fb98c7329)
+
+
+Click on the SSH client tab and see the instructions on connecting to the instance via Unix/Linux using SSH. (Copy the ssh command and keep it aside)
+![Artboard 12](https://github.com/user-attachments/assets/20a9112d-eee2-4161-9025-36ef465f483d)
+
 
 
 ## Install and Configure a Web Server
 
-Head to you Linux terminal and switch to root user (sudo su-) and open the folder the folder where the Key pair file is located (cd Downloads)
-![Screenshot from 2025-04-01 21-06-00](https://github.com/user-attachments/assets/1e6cdeed-29c4-4cf7-b518-e1b741003de7)
+Head to your Linux terminal, switch to root user (sudo su-), and open the folder where the Key pair file is located (cd Downloads)
+![Artboard 13](https://github.com/user-attachments/assets/d25bf9bf-1819-453c-9c94-445be99300fa)
+
 
 Run the saved command: ssh -i 'css-test-key.pem' ec2-user@ec2-52-91-87-15.compute-1.amazonaws.com from the "Connect to instance" page and select yes to continue
-![Screenshot from 2025-04-01 21-10-39](https://github.com/user-attachments/assets/931cb089-1e7a-48a9-844b-8aa3d5f97930)
+![Artboard 14](https://github.com/user-attachments/assets/ed71feb9-0b2b-4b8e-a552-97a5400855e6)
+
 
 Become root user (sudo su-) and update the system with 'yum update -y' command
-![Screenshot from 2025-04-01 21-13-53](https://github.com/user-attachments/assets/c80edb86-3ec0-40de-8237-affc1007db6e)
+![Artboard 15](https://github.com/user-attachments/assets/e2772fb5-3c33-491e-ad41-995c61edfa07)
+
 
 Install the web server with 'yum install -y httpd' command
-![Screenshot from 2025-04-01 11-41-21](https://github.com/user-attachments/assets/2315361d-e9a0-4559-850a-d18b0f204c85)
-![Screenshot from 2025-04-01 21-15-27](https://github.com/user-attachments/assets/5c3782d1-447c-4fff-933b-f3b6213048e3)
+![Artboard 16](https://github.com/user-attachments/assets/1a7b18ea-ce0b-4029-be35-801f42d97f48)
+
 
 Create a new 'temp' directory (mkdir temp) and the open that directory (cd temp)
-![Screenshot from 2025-04-01 21-32-55](https://github.com/user-attachments/assets/bbbbd72a-8ff1-4523-be3f-4cabd1a6e659)
+![Artboard 17](https://github.com/user-attachments/assets/fbb492bd-fe3f-4540-815f-779edbbc2d9a)
+
 
 Head to free-css.com and copy the link address of your desired css template
-![Screenshot 2025-04-01 213339](https://github.com/user-attachments/assets/43734e88-f69d-482d-b0be-d693735a993b)
+![Artboard 18](https://github.com/user-attachments/assets/09ca45c2-ad4b-4ce6-9c60-5dcc2767245f)
+
 
 Download the file on the terminal using the wget command 'wget' command
-![Screenshot from 2025-04-01 21-34-52](https://github.com/user-attachments/assets/1cd4c0c1-ef2e-4065-92e8-9166d1ad4bee)
+![Artboard 19](https://github.com/user-attachments/assets/76ffa909-a5bc-409d-b391-506aff7b2f3e)
+
 
 Unzip the file (unzip oxer.zip) and open the folder from the unzipped file
-![Screenshot from 2025-04-01 21-36-08](https://github.com/user-attachments/assets/68224bbe-4aff-46c2-b208-1089e9f9f695)
-![Screenshot from 2025-04-01 21-37-12](https://github.com/user-attachments/assets/9ccfd9ab-ff87-46cb-875f-2b7d1630b146)
-![Screenshot from 2025-04-01 21-37-44](https://github.com/user-attachments/assets/244eab0b-323c-4533-984f-0c1d645f10d2)
+![Artboard 20](https://github.com/user-attachments/assets/d45cf483-942a-44ac-9f8f-458f884d2438)
+![Artboard 21](https://github.com/user-attachments/assets/d2b00746-e62a-44f0-8028-2f8f24f84af0)
 
-To activate html server use the 'systemctl status httpd' command and then use 'systemctl start httpd' command to start the service
-![Screenshot from 2025-04-01 21-41-46](https://github.com/user-attachments/assets/eb81eb1d-0fcd-4f9c-8bcb-0ca06f249171)
 
-Go to instance page and copy the public ipv4 address past it on your search engine
-![Screenshot 2025-04-01 214509](https://github.com/user-attachments/assets/4da7d008-a341-4c36-89eb-1507a52d4658)
-![Screenshot 2025-04-01 214658](https://github.com/user-attachments/assets/940d96b3-6468-45d3-91fe-28895d77bb07)
+To activate the html server use the 'systemctl enable httpd' command and then use 'systemctl start httpd' command to start the service
+![Artboard 22](https://github.com/user-attachments/assets/af6c10a5-e814-4969-9d3e-f68882b7dc1d)
+
+
+Go to Instance page and copy the public ipv4 address, and paste it on your search engine
+![Artboard 23](https://github.com/user-attachments/assets/ec2ee031-0069-4f24-ac3b-72f37674d3ca)
+![Artboard 24](https://github.com/user-attachments/assets/81c41494-a03a-4f7d-af38-4038fb7f13a5)
+
 
 
 
