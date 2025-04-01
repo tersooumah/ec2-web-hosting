@@ -27,7 +27,7 @@ Configure security group to allow SSH, HTTP and HTTPS traffic and click launch i
 Head back to Instances dashboard and Refresh Instances, and wait for a few minutes for the status to update, then highlight the newly created instance and "connect"
 ![10](https://github.com/user-attachments/assets/1fe6c348-7742-4b9c-96eb-cec2126f9fd8)
 
-Click on SSH client and see the instructions on how to connect to the service via unix/Linux using ssh.
+Click on SSH client and see the instructions on how to connect to the service via unix/Linux using ssh. (Copy the ssh command and keep aside)
 ![11](https://github.com/user-attachments/assets/fdd70bfc-3f66-4aad-ab02-e03fb98c7329)
 
 
@@ -36,7 +36,7 @@ Click on SSH client and see the instructions on how to connect to the service vi
 Head to you Linux terminal and switch to root user (sudo su-) and open the folder the folder where the Key pair file is located (cd Downloads)
 ![Screenshot from 2025-04-01 21-06-00](https://github.com/user-attachments/assets/1e6cdeed-29c4-4cf7-b518-e1b741003de7)
 
-Run the command: ssh -i 'css-test-key.pem' ec2-user@ec2-52-91-87-15.compute-1.amazonaws.com from the "Connect to instance" page and select yes to continue
+Run the saved command: ssh -i 'css-test-key.pem' ec2-user@ec2-52-91-87-15.compute-1.amazonaws.com from the "Connect to instance" page and select yes to continue
 ![Screenshot from 2025-04-01 21-10-39](https://github.com/user-attachments/assets/931cb089-1e7a-48a9-844b-8aa3d5f97930)
 
 Become root user (sudo su-) and update the system with 'yum update -y' command
