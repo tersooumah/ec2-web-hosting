@@ -70,6 +70,8 @@ Unzip the file (unzip oxer.zip) and open the folder from the unzipped file
 ![Artboard 20](https://github.com/user-attachments/assets/d45cf483-942a-44ac-9f8f-458f884d2438)
 ![Artboard 21](https://github.com/user-attachments/assets/d2b00746-e62a-44f0-8028-2f8f24f84af0)
 
+Move the content of the folder to this directory /var/www/html/
+![xxxxx](https://github.com/user-attachments/assets/3e2078da-4267-47f1-ba66-d56f85c61a51)
 
 To activate the html server use the 'systemctl enable httpd' command and then use 'systemctl start httpd' command to start the service
 ![Artboard 22](https://github.com/user-attachments/assets/af6c10a5-e814-4969-9d3e-f68882b7dc1d)
@@ -78,6 +80,7 @@ To activate the html server use the 'systemctl enable httpd' command and then us
 Go to Instance page and copy the public ipv4 address, and paste it on your search engine
 ![Artboard 23](https://github.com/user-attachments/assets/ec2ee031-0069-4f24-ac3b-72f37674d3ca)
 ![Artboard 24](https://github.com/user-attachments/assets/81c41494-a03a-4f7d-af38-4038fb7f13a5)
+
 
 
 
